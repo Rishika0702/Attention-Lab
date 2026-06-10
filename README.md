@@ -12,6 +12,16 @@
 - Grouped-Query Attention (GQA) → Compromise between MHA and MQA; groups of query heads share key-values.
 - FlashAttention → Computes attention much more efficiently using optimized GPU memory access without changing the mathematical result.
 
+A more complete evolution is:
+Attention
+   └── Self-Attention (SA)
+           └── Multi-Head Attention (MHA)
+                   ├── Causal Attention (Decoder)
+                   ├── Cross-Attention (Encoder-Decoder)
+                   ├── Multi-Query Attention (MQA)
+                   ├── Grouped-Query Attention (GQA)
+                   └── FlashAttention (Optimization Layer)
+
 **8-Step Playback** — step through Token Embedding → Positional Encoding → Q/K/V Projection → Scale → Softmax → Attention Matrix → Weighted Values → Output Z, with play/pause/speed controls.
 
 **6 Right Panel Tabs per module:**
