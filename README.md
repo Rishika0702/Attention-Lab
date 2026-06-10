@@ -4,13 +4,13 @@
 
 **7 Attention Modules** — switch via the sidebar (SA → MHA → CA → XA → MQA → GQA → Flash). Each one rewires the scene, heatmap, and all panels simultaneously.
 
-Self-Attention (SA) → Every token looks at every other token.
-Multi-Head Attention (MHA) → Multiple attention mechanisms run in parallel to learn different relationships.
-Causal Attention (CA) → Tokens can only attend to previous tokens (used in GPT-style models).
-Cross-Attention (XA) → One sequence attends to another sequence (used in encoder-decoder models).
-Multi-Query Attention (MQA) → Many query heads share a single key-value set to reduce memory.
-Grouped-Query Attention (GQA) → Compromise between MHA and MQA; groups of query heads share key-values.
-FlashAttention → Computes attention much more efficiently using optimized GPU memory access without changing the mathematical result.
+- Self-Attention (SA) → Every token looks at every other token.
+- Multi-Head Attention (MHA) → Multiple attention mechanisms run in parallel to learn different relationships.
+- Causal Attention (CA) → Tokens can only attend to previous tokens (used in GPT-style models).
+- Cross-Attention (XA) → One sequence attends to another sequence (used in encoder-decoder models).
+- Multi-Query Attention (MQA) → Many query heads share a single key-value set to reduce memory.
+- Grouped-Query Attention (GQA) → Compromise between MHA and MQA; groups of query heads share key-values.
+- FlashAttention → Computes attention much more efficiently using optimized GPU memory access without changing the mathematical result.
 
 **8-Step Playback** — step through Token Embedding → Positional Encoding → Q/K/V Projection → Scale → Softmax → Attention Matrix → Weighted Values → Output Z, with play/pause/speed controls.
 
